@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <span class="app-name" style="float:left; padding: 1em;">
+            <i class="fas fa-book-open"></i>&nbsp;Diario</span>
+    </div>
+    <form class="body" id="signup" method="">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <div class="notify" id="notify"></div>
+
+            <hr>
+            <label for="email">
+                <b>Full Name</b>
+            </label>
+            <input type="text" placeholder="Enter Full Name" name="full_name" id="full_name" required>
+
+            <label for="email">
+                <b>Email</b>
+            </label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw">
+                <b>Password</b>
+            </label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+            <hr>
+            <a href="dashboard.html" <button type="submit" id="submit" class="registerbtn">Sign Up</button>></a>
+        </div>
+
+        <div class="signin">
+            <p>Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+        </div>
+    </form>
+
+    <script src="assets/js/signup.js"></script>
+</body>
+
+</html>

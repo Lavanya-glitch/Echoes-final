@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <span class="app-name" style="float:left; padding: 1em;">
+            <i class="fas fa-book-open"></i>&nbsp;Diario</span>
+    </div>
+
+    <div class="body">
+        <div class="container">
+            <h3>Are you sure you want to delete this entry?</h3>
+            <form style="display:inline" action="../home" method="get">
+                <button class="submit btn">No</button>
+            </form>
+            <form style="display:inline" id="delete" method="get">
+                <button class="submit btn ">Yes</button>
+            </form>
+            <div class="notify" id="notify"></div>
+        </div>
+
+    </div>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/deleteEntry.js"></script>
+
+</body>
+
+</html>

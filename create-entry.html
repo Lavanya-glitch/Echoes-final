@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=92iapb5hpv4b03x6b71ddi2l0dzs9x1stzcdrt5096d34nwg"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            height: 500,
+            menubar: false,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks',
+                'insertdatetime media table contextmenu paste code help wordcount'
+            ],
+            toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+            content_css: [
+                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                '//www.tinymce.com/css/codepen.min.css'],
+            browser_spellcheck: true,
+            height: 200
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <span class="app-name" style="float:left; padding: 1em;">
+            <i class="fas fa-book-open"></i>&nbsp;Diario</span>
+    </div>
+
+
+    <form name="create" id="create" class="body">
+        <div class="container">
+
+            <h1>Create Entry</h1>
+            <div class="notify" id="notify"></div>
+
+            <hr>
+            <label for="title">
+                <b>Title</b>
+            </label>
+            <input type="text" placeholder="Title" name="title" id="title" required>
+
+            <label for="psw">
+                <b>Body</b>
+            </label>
+            <textarea id="body" name="body"></textarea>
+
+            <hr>
+            <button type="submit" class="registerbtn">Create Entry</button>
+
+        </div>
+
+    </form>
+    <script src="assets/js/modal.js"></script>
+    <script src="../assets/js/createEntry.js"></script>
+
+</body>
+
+</html>

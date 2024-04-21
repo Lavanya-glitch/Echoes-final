@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="assets/js/main.js"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=92iapb5hpv4b03x6b71ddi2l0dzs9x1stzcdrt5096d34nwg"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            height: 500,
+            menubar: false,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks',
+                'insertdatetime media table contextmenu paste code help wordcount'
+            ],
+            toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+            content_css: [
+                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                '//www.tinymce.com/css/codepen.min.css'],
+            browser_spellcheck: true,
+            height: 200
+        });
+    </script>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <span class="app-name" style="float:left; padding: 1em;">
+            <i class="fas fa-book-open"></i>&nbsp;Diario</span>
+        <span class="pull-right">
+            <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard</a>
+            <a href="profile.html">
+                <i class="fas fa-user-circle"></i>&nbsp;Profile</a>
+            <a href="/" onclick="localStorage.removeItem('token');">
+                <i class="fas fa-power-off"></i>&nbsp;Logout</a>
+        </span>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggle()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="body">
+
+        <div class="wrapper">
+            <form action="create-entry" method="get">
+                <h2>Recent Entries</h2>
+                <a href="create-entry.html" <button class="btn pull-right" id="myBtn">Create new entry</button>></a>
+            </form>
+
+        </div>
+        <div id="notify" class="notify"></div>
+        <section id="entries">
+
+        </section>
+    </div>
+
+    </div>
+
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/getEntries.js"></script>
+    <script src="assets/js/createEntry.js"></script>
+</body>
+
+</html>
